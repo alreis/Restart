@@ -36,7 +36,7 @@ struct HomeView: View {
             
             // MARK - CENTER
             
-            Text("The time that leads to mastery is dependent on the intensity of our focus.")
+            Text("Continuous image animation and an application restart button with a sound feedback.")
                 .font(.title3)
                 .fontWeight(.light)
                 .foregroundColor(.secondary)
@@ -49,6 +49,7 @@ struct HomeView: View {
             
             Button(action: {
                 withAnimation {
+                    playSound(sound: "success", type: "m4a")
                     isOnboardingViewActive = true
                 }
             }) {
